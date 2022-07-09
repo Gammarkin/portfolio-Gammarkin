@@ -11,26 +11,72 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header
+      className={
+        darkMode ? 'header__container__dark' : 'header__container__light'
+      }
+    >
       <Link to="/about-me">
-        <p>Marcos Roberto</p>
+        <p
+          className={
+            darkMode
+              ? 'header__container__name__dark'
+              : 'header__container__name__light'
+          }
+        >
+          Marcos Roberto
+        </p>
       </Link>
 
-      <button type="button" onClick={handleSetDarkMode}>
-        {!darkMode ? 'Light' : 'Dark'}
-      </button>
+      <section className="header__utilities">
+        <button
+          className={
+            darkMode
+              ? 'header__utilities__button__dark'
+              : 'header__utilities__button__light'
+          }
+          type="button"
+          onClick={handleSetDarkMode}
+        >
+          {!darkMode ? 'Light' : 'Dark'}
+        </button>
 
-      <Link to="/about-me">
-        <p>about me</p>
-      </Link>
+        <Link to="/about-me">
+          <p
+            className={
+              darkMode
+                ? 'header__utilities__links__dark'
+                : 'header__utilities__links__light'
+            }
+          >
+            about me
+          </p>
+        </Link>
 
-      <Link to="/projects">
-        <p>projects</p>
-      </Link>
+        <Link to="/projects">
+          <p
+            className={
+              darkMode
+                ? 'header__utilities__links__dark'
+                : 'header__utilities__links__light'
+            }
+          >
+            projects
+          </p>
+        </Link>
 
-      <Link to="/contacts">
-        <p>How to reach me</p>
-      </Link>
+        <Link to="/contacts">
+          <p
+            className={
+              darkMode
+                ? 'header__utilities__links__dark'
+                : 'header__utilities__links__light'
+            }
+          >
+            How to reach me
+          </p>
+        </Link>
+      </section>
     </header>
   );
 }

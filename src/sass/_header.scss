@@ -1,0 +1,99 @@
+@import 'config';
+
+%header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 7vh;
+}
+
+.header__container__light {
+  @extend %header__container;
+  background-color: $primary-color-light;
+  color: $secondary-color-light;
+  font-family: $font-family-base;
+}
+
+.header__container__dark {
+  @extend %header__container;
+  background-color: $primary-color-dark;
+  color: $secondary-color-dark;
+  font-family: $font-family-base;
+}
+
+%header__name {
+  margin-left: 2em;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.header__container__name__light {
+  @extend %header__name;
+  color: $secondary-color-light;
+  font-family: $font-family-base;
+}
+
+.header__container__name__dark {
+  @extend %header__name;
+  color: $secondary-color-dark;
+  font-family: $font-family-base;
+}
+
+.header__utilities {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  margin: 1rem;
+}
+
+%header__utilities__btn {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.header__utilities__button__light {
+  @extend %header__utilities__btn;
+  background-color: $primary-color-light;
+  color: $secondary-color-light;
+  font-family: $font-family-base;
+}
+
+.header__utilities__button__dark {
+  @extend %header__utilities__btn;
+  background-color: $primary-color-dark;
+  color: $secondary-color-dark;
+  font-family: $font-family-base;
+}
+
+%header__utilities__links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  margin: 0 2rem;
+  font-size: 1em;
+  font-weight: 900;
+}
+
+.header__utilities__links__light {
+  @extend %header__utilities__links;
+  background-color: $primary-color-light;
+  color: $secondary-color-light;
+  font-family: $font-family-base;
+}
+
+.header__utilities__links__dark {
+  @extend %header__utilities__links;
+  background-color: $primary-color-dark;
+  color: $secondary-color-dark;
+  font-family: $font-family-base;
+}
