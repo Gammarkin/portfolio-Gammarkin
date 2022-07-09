@@ -1,5 +1,24 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import AppContext from '../context/AppContext';
+import {Link} from 'react-router-dom';
 
 export default function Header() {
-  return <header>Header</header>;
+  const {darkMode, setDarkMode} = useContext(AppContext);
+
+  const handleSetDarkMode = () => {
+    window.localStorage.setItem('darkMode', JSON.stringify(!darkMode));
+    setDarkMode(!darkMode);
+  };
+
+  return (
+    <header>
+      <Link to="/about-me">
+        <p>Marcos Roberto</p>
+      </Link>
+
+      <button type="button" onClick={handleSetDarkMode}>
+        {!darkMode ? 'Light' : 'Dark'}
+      </button>
+    </header>
+  );
 }
