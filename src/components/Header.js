@@ -19,6 +19,18 @@ export default function Header() {
       <button type="button" onClick={handleSetDarkMode}>
         {!darkMode ? 'Light' : 'Dark'}
       </button>
+
+      <Link to="/about-me">
+        <p>about me</p>
+      </Link>
+
+      <Link to="/projects">
+        <p>projects</p>
+      </Link>
+
+      <Link to="/contacts">
+        <p>How to reach me</p>
+      </Link>
     </header>
   );
 }
