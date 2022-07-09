@@ -1,9 +1,10 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
 import AppContext from '../context/AppContext';
-import HamburguerMenu from './HamburguerMenu';
 
-export default function Header() {
+import {Menu} from '@mantine/core';
+
+export default function HamburguerMenu() {
   const {darkMode, setDarkMode} = useContext(AppContext);
 
   const handleSetDarkMode = () => {
@@ -12,36 +13,24 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={
-        darkMode ? 'header__container__dark' : 'header__container__light'
-      }
+    <Menu
+      style={darkMode ? {backgroundColor: '#fafafa', borderRadius: '.3em'} : {}}
+      className="header__hamburguer__menu"
     >
-      <Link to="/about-me">
+      <Menu.Label>Utilities</Menu.Label>
+      <Menu.Item onClick={handleSetDarkMode}>
         <p
-          className={
-            darkMode
-              ? 'header__container__name__dark'
-              : 'header__container__name__light'
-          }
-        >
-          Marcos Roberto
-        </p>
-      </Link>
-
-      <section className="header__utilities">
-        <button
           className={
             darkMode
               ? 'header__utilities__button__dark'
               : 'header__utilities__button__light'
           }
-          type="button"
-          onClick={handleSetDarkMode}
         >
           {!darkMode ? 'Light' : 'Dark'}
-        </button>
+        </p>
+      </Menu.Item>
 
+      <Menu.Item>
         <Link to="/about-me">
           <p
             className={
@@ -53,7 +42,9 @@ export default function Header() {
             about me
           </p>
         </Link>
+      </Menu.Item>
 
+      <Menu.Item>
         <Link to="/projects">
           <p
             className={
@@ -65,7 +56,9 @@ export default function Header() {
             projects
           </p>
         </Link>
+      </Menu.Item>
 
+      <Menu.Item>
         <Link to="/contacts">
           <p
             className={
@@ -77,9 +70,7 @@ export default function Header() {
             How to reach me
           </p>
         </Link>
-      </section>
-
-      <HamburguerMenu />
-    </header>
+      </Menu.Item>
+    </Menu>
   );
 }

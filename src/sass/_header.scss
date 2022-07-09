@@ -8,6 +8,10 @@
   height: 7vh;
 }
 
+.header__hamburguer__menu {
+  display: none;
+}
+
 .header__container__light {
   @extend %header__container;
   background-color: $primary-color-light;
@@ -44,7 +48,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 100%;
   height: 100%;
   padding: 0 2rem;
   margin: 1rem;
@@ -57,18 +60,19 @@
   font-size: 1rem;
   font-weight: 900;
   cursor: pointer;
+  height: 7vh;
 }
 
 .header__utilities__button__light {
   @extend %header__utilities__btn;
-  background-color: $primary-color-light;
+  background-color: darken($primary-color-light, 3%);
   color: $secondary-color-light;
   font-family: $font-family-base;
 }
 
 .header__utilities__button__dark {
   @extend %header__utilities__btn;
-  background-color: $primary-color-dark;
+  background-color: lighten($primary-color-dark, 10%);
   color: $secondary-color-dark;
   font-family: $font-family-base;
 }
@@ -87,13 +91,60 @@
 .header__utilities__links__light {
   @extend %header__utilities__links;
   background-color: $primary-color-light;
-  color: $secondary-color-light;
+  color: darken($secondary-color-light, 30%);
   font-family: $font-family-base;
 }
 
 .header__utilities__links__dark {
   @extend %header__utilities__links;
-  background-color: $primary-color-dark;
-  color: $secondary-color-dark;
+  color: lighten($secondary-color-dark, 30%);
   font-family: $font-family-base;
+}
+
+@media screen and (max-width: 888px) {
+  .header__container__name__light {
+    font-size: 0.9em;
+  }
+
+  .header__container__name__dark {
+    font-size: 0.9em;
+  }
+
+  .header__utilities__button__light {
+    font-size: 0.9em;
+    margin: 0.5em;
+  }
+
+  .header__utilities__button__dark {
+    font-size: 0.9em;
+    margin: 0.5em;
+  }
+
+  .header__utilities__links__light {
+    font-size: 0.9em;
+    margin: 0.5em;
+  }
+
+  .header__utilities__links__dark {
+    font-size: 0.9em;
+    margin: 0.5em;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .header__utilities {
+    display: none;
+  }
+
+  .header__hamburguer__menu {
+    display: block;
+  }
+
+  .header__utilities__links__light {
+    background-color: white;
+  }
+
+  .header__utilities__links__dark {
+    color: black;
+  }
 }
