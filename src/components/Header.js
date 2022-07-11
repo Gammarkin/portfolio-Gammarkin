@@ -54,7 +54,7 @@ export default function Header() {
           </p>
         </Link>
 
-        <Link to="/projects">
+        <Link to="/work">
           <p
             className={
               darkMode
@@ -62,7 +62,7 @@ export default function Header() {
                 : 'header__utilities__links__light'
             }
           >
-            projects
+            Work
           </p>
         </Link>
 
@@ -74,7 +74,7 @@ export default function Header() {
                 : 'header__utilities__links__light'
             }
           >
-            How to reach me
+            Contacts
           </p>
         </Link>
       </section>
