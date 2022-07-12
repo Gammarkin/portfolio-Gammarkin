@@ -1,0 +1,72 @@
+%description__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+.description__container__dark {
+  @extend %description__container;
+  background-color: $special-color-dark;
+  color: $primary-color-dark;
+}
+
+.description__container__light {
+  @extend %description__container;
+  background-color: $primary-color-dark;
+  color: $primary-color-light;
+}
+
+.description__container__image {
+  width: 30px;
+  border-radius: 8em;
+  margin-top: 2em;
+}
+
+%description__container__text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 75vh;
+  width: 70vw;
+  border-radius: 1em;
+}
+
+.description__container__text__dark {
+  @extend %description__container__text;
+  background-color: $primary-color-dark;
+  color: $primary-color-light;
+}
+
+.description__container__text__light {
+  @extend %description__container__text;
+  background-color: $primary-color-light;
+  color: $primary-color-dark;
+}
+
+.genericCard__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: lighten($special-color-dark, 10%);
+  width: 25vw;
+  height: 10vh;
+  color: white;
+  border-radius: 1em;
+  margin: 1em;
+
+  &:hover {
+    background-color: lighten($special-color-dark, 20%);
+  }
+}
+
+.description__container__text__projects {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70vw;
+  flex-wrap: wrap;
+}
