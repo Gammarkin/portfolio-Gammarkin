@@ -24,12 +24,12 @@ export default function Description() {
     <section
       className={`description__container__${darkMode ? 'dark' : 'light'}`}
     >
+      <h2 style={{color: 'white'}}>Projects</h2>
       <section
         className={`description__container__text__${
           darkMode ? 'dark' : 'light'
         }`}
       >
-        <h2>Projects</h2>
         <section className="description__container__text__projects">
           <GenericcProjectCard
             link={shoppingCart}
@@ -49,17 +49,19 @@ export default function Description() {
             description={recipeAppDesc}
           />
 
-          <GenericcProjectCard
-            link={onlineStore}
-            title="Online store"
-            description={onlineStoreDesc}
-          />
+          <div className="doNotShowOnMobile">
+            <GenericcProjectCard
+              link={onlineStore}
+              title="Online store"
+              description={onlineStoreDesc}
+            />
 
-          <GenericcProjectCard
-            link={trySeries}
-            title="Try series"
-            description={trySeriesDesc}
-          />
+            <GenericcProjectCard
+              link={trySeries}
+              title="Try series"
+              description={trySeriesDesc}
+            />
+          </div>
         </section>
       </section>
     </section>
