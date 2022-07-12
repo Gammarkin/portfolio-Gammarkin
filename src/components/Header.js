@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import HamburguerMenu from './HamburguerMenu';
 
+import dark from '../icons/iconmonstr-flashlight-13.png';
+import light from '../icons/iconmonstr-flashlight-14.png';
+
 export default function Header() {
   const {darkMode, setDarkMode} = useContext(AppContext);
 
@@ -39,7 +42,12 @@ export default function Header() {
           type="button"
           onClick={handleSetDarkMode}
         >
-          {!darkMode ? 'Light' : 'Dark'}
+          <img
+            style={{borderRadius: '5em'}}
+            width={30}
+            src={darkMode ? dark : light}
+            alt="dark mode icon"
+          />
         </button>
 
         <Link to="/about-me">
@@ -50,7 +58,7 @@ export default function Header() {
                 : 'header__utilities__links__light'
             }
           >
-            about me
+            About me
           </p>
         </Link>
 
