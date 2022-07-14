@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/about/Header';
+import Header from '../components/generic/Header';
 import Introduction from '../components/about/Introduction';
 
 export default function AboutMe() {
