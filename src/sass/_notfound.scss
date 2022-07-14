@@ -1,0 +1,83 @@
+@import 'config';
+
+%error404__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.error404__container__light {
+  @extend %error404__container;
+  background-color: $primary-color-light;
+  color: $primary-color-dark;
+}
+
+.error404__container__dark {
+  @extend %error404__container;
+  background-color: $primary-color-dark;
+  color: $primary-color-light;
+}
+
+%error404 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.error404__light {
+  @extend %error404;
+  color: $primary-color-dark;
+}
+
+.error404__dark {
+  @extend %error404;
+  color: $primary-color-light;
+}
+
+%error404__message {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.error404__message__light {
+  @extend %error404__message;
+  color: $primary-color-dark;
+}
+
+.error404__message__dark {
+  @extend %error404__message;
+  color: $primary-color-light;
+}
+
+%error404__link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.error404__link__light {
+  @extend %error404__link;
+  color: hsl(240, 22%, 18%);
+}
+
+.error404__link__dark {
+  @extend %error404__link;
+  color: orange;
+}
+
+@media screen and (max-width: 375px) {
+  %error404 {
+    font-size: 3rem;
+  }
+
+  %error404__message {
+    font-size: 1.5rem;
+  }
+
+  %error404__link {
+    font-size: 1rem;
+  }
+}
