@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import AboutMe from '../pages/AboutMe';
 import Projects from '../pages/Projects';
+import Contacts from '../pages/Contacts';
 
 export default function MainRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function MainRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/about-me" element={<AboutMe />} />
       <Route path="/projects" element={<Projects />} />
+      <Route path="/contacts" element={<Contacts />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
