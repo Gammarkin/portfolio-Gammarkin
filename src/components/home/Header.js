@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
-import AppContext from '../context/AppContext';
+import AppContext from '../../context/AppContext';
 import HamburguerMenu from './HamburguerMenu';
 
-import dark from '../icons/iconmonstr-flashlight-13.png';
-import light from '../icons/iconmonstr-flashlight-14.png';
+import dark from '../../icons/iconmonstr-flashlight-13.png';
+import light from '../../icons/iconmonstr-flashlight-14.png';
 
 export default function Header() {
   const {darkMode, setDarkMode} = useContext(AppContext);

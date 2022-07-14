@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import AppContext from '../context/AppContext';
+import AppContext from '../../context/AppContext';
 import GenericcProjectCard from './GenericProjectCard';
 
 import {
@@ -8,14 +8,14 @@ import {
   recipeAppDesc,
   onlineStoreDesc,
   trySeriesDesc,
-} from '../data/descriptions';
+} from '../../data/descriptions';
 import {
   appIdeas,
   recipeApp,
   onlineStore,
   trySeries,
   shoppingCart,
-} from '../data/links';
+} from '../../data/links';
 
 export default function Description() {
   const {darkMode} = useContext(AppContext);
