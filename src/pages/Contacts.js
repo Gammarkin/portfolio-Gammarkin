@@ -1,5 +1,10 @@
 import React from 'react';
+import Header from '../components/home/Header';
 
 export default function Contacts() {
-  return <div>Contacts</div>;
+  return (
+    <main>
+      <Header />
+    </main>
+  );
 }
