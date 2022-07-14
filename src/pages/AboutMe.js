@@ -1,5 +1,10 @@
 import React from 'react';
+import Header from '../components/about/Header';
 
 export default function AboutMe() {
-  return <main>AboutMe</main>;
+  return (
+    <main>
+      <Header />
+    </main>
+  );
 }
