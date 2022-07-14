@@ -10,11 +10,13 @@
 .about__container__light {
   @extend %about__container;
   background-color: $primary-color-light;
+  transition: all 0.3s ease-in-out;
 }
 
 .about__container__dark {
   @extend %about__container;
   background-color: $primary-color-dark;
+  transition: all 0.3s ease-in-out;
 }
 
 .about__image {
