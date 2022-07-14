@@ -3,7 +3,7 @@ import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 
 import Home from '../pages/Home';
-import NotFound from '../components/NotFound';
+import NotFound from '../pages/NotFound';
 
 export default function MainRoutes() {
   return (
