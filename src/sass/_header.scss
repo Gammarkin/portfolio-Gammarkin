@@ -37,12 +37,20 @@
   @extend %header__name;
   color: $secondary-color-dark;
   font-family: $font-family-base;
+
+  &:hover {
+    color: hsl(240, 22%, 18%);
+  }
 }
 
 .header__container__name__dark {
   @extend %header__name;
   color: $primary-color-light;
   font-family: $font-family-base;
+
+  &:hover {
+    color: orange;
+  }
 }
 
 .header__utilities {

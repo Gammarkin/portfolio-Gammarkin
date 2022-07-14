@@ -4,6 +4,7 @@ import AppContext from './AppContext';
 
 export default function AppProvider({children}) {
   const [darkMode, setDarkMode] = useState(false);
+  const [lastClicked, setLastClicked] = useState('');
 
   useEffect(() => {
     const darkModeFromLocalStorage =
@@ -12,7 +13,12 @@ export default function AppProvider({children}) {
     setDarkMode(darkModeFromLocalStorage);
   }, []);
 
-  const itemsToShare = {darkMode, setDarkMode};
+  const itemsToShare = {
+    darkMode,
+    setDarkMode,
+    lastClicked,
+    setLastClicked,
+  };
   return (
     <AppContext.Provider value={itemsToShare}>{children}</AppContext.Provider>
   );

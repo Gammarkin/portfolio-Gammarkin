@@ -1,13 +1,39 @@
-import React, {useContext} from 'react';
-import {Link} from 'react-router-dom';
+import React, {useContext, useEffect} from 'react';
+import {Link, useLocation} from 'react-router-dom';
 import AppContext from '../../context/AppContext';
 import HamburguerMenu from './HamburguerMenu';
 
 import dark from '../../icons/iconmonstr-flashlight-13.png';
 import light from '../../icons/iconmonstr-flashlight-14.png';
 
+const darkModeColor = 'orange';
+const lightModeColor = 'hsl(30, 80%, 70%)';
+
 export default function Header() {
-  const {darkMode, setDarkMode} = useContext(AppContext);
+  const {darkMode, setDarkMode, lastClicked, setLastClicked} =
+    useContext(AppContext);
+
+  const {pathname} = useLocation();
+
+  useEffect(() => {
+    switch (pathname) {
+      case '/':
+        setLastClicked('');
+        break;
+      case '/about-me':
+        setLastClicked('about-me');
+        break;
+      case '/contacts':
+        setLastClicked('contacts');
+        break;
+      case '/projects':
+        setLastClicked('projects');
+        break;
+      default:
+        setLastClicked('');
+        break;
+    }
+  });
 
   const handleSetDarkMode = () => {
     window.localStorage.setItem('darkMode', JSON.stringify(!darkMode));
@@ -22,6 +48,13 @@ export default function Header() {
     >
       <Link to="/">
         <p
+          style={
+            lastClicked === ''
+              ? {
+                  color: darkMode ? darkModeColor : lightModeColor,
+                }
+              : {}
+          }
           className={
             darkMode
               ? 'header__container__name__dark'
@@ -52,6 +85,13 @@ export default function Header() {
 
         <Link to="/about-me">
           <p
+            style={
+              lastClicked === 'about-me'
+                ? {
+                    color: darkMode ? darkModeColor : lightModeColor,
+                  }
+                : {}
+            }
             className={
               darkMode
                 ? 'header__utilities__links__dark'
@@ -64,6 +104,13 @@ export default function Header() {
 
         <Link to="/projects">
           <p
+            style={
+              lastClicked === 'projects'
+                ? {
+                    color: darkMode ? darkModeColor : lightModeColor,
+                  }
+                : {}
+            }
             className={
               darkMode
                 ? 'header__utilities__links__dark'
@@ -76,6 +123,13 @@ export default function Header() {
 
         <Link to="/contacts">
           <p
+            style={
+              lastClicked === 'contacts'
+                ? {
+                    color: darkMode ? darkModeColor : lightModeColor,
+                  }
+                : {}
+            }
             className={
               darkMode
                 ? 'header__utilities__links__dark'
