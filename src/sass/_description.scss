@@ -23,8 +23,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  height: 75vh;
-  width: 70vw;
+  height: 85vh;
+  width: 85vw;
   border-radius: 1em;
 }
 
@@ -32,10 +32,83 @@
   @extend %description__container__text;
   background-color: $primary-color-dark;
   color: $primary-color-light;
+  transition: all 0.3s ease-in-out;
 }
 
 .description__container__text__light {
   @extend %description__container__text;
   background-color: $primary-color-light;
   color: $primary-color-dark;
+  transition: all 0.3s ease-in-out;
+}
+
+.description__container__hardskill__icon {
+  width: 8vw;
+  border-radius: 1em;
+  margin: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+%description__container__hardskill__button {
+  width: 10vw;
+  margin: 1em;
+  height: 3vw;
+  border-radius: 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.description__container__hardskill__button__light {
+  @extend %description__container__hardskill__button;
+  background-color: darken($primary-color-light, 10%);
+  color: $primary-color-dark;
+}
+
+.description__container__hardskill__button__dark {
+  @extend %description__container__hardskill__button;
+  background-color: lighten($primary-color-dark, 10%);
+  color: $primary-color-light;
+}
+
+.description__container__softskill__button__light {
+  @extend %description__container__hardskill__button;
+  background-color: darken($primary-color-light, 10%);
+  color: $primary-color-dark;
+}
+
+.description__container__softskill__button__dark {
+  @extend %description__container__hardskill__button;
+  background-color: lighten($primary-color-dark, 10%);
+  color: $primary-color-light;
+}
+
+.description__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description__text {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.description__skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 60vw;
+  transition: all 0.3s ease-in-out;
+}
+
+.description__container__softskill__description {
+  text-align: center;
+  font-size: 1.5em;
+  color: orange;
+  width: 20vw;
+  transition: all 0.3s ease-in-out;
 }

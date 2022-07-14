@@ -7,7 +7,9 @@ export default function Description() {
   const {darkMode} = useContext(AppContext);
 
   const [skillsToUse, setSkillsToUse] = useState(hardSkills);
-  const [hoveringMessage, setHoveringMessage] = useState('');
+  const [hoveringMessage, setHoveringMessage] = useState(
+    'Hover a skill to see its description'
+  );
 
   return (
     <section
@@ -19,40 +21,65 @@ export default function Description() {
           darkMode ? 'dark' : 'light'
         }`}
       >
-        <section>
-          <button type="button" onClick={() => setSkillsToUse(hardSkills)}>
-            Hard-skills
-          </button>
-          <button type="button" onClick={() => setSkillsToUse(softSkills)}>
-            Soft-skills
-          </button>
-          <section>
-            {skillsToUse.map((skill) => {
+        <section className="description__content">
+          <p className="description__text">
+            My current skills as a developer.
+            <br /> And there's more to come.
+          </p>
+          <section className="flex">
+            <button
+              className={`description__container__hardskill__button__${
+                darkMode ? 'dark' : 'light'
+              }`}
+              type="button"
+              onClick={() => setSkillsToUse(hardSkills)}
+            >
+              Hard-skills
+            </button>
+            <button
+              className={`description__container__softskill__button__${
+                darkMode ? 'dark' : 'light'
+              }`}
+              type="button"
+              onClick={() => setSkillsToUse(softSkills)}
+            >
+              Soft-skills
+            </button>
+          </section>
+
+          <p className="description__text">{hoveringMessage}</p>
+          <section className="description__skills">
+            {skillsToUse.map(({name, icon, description}) => {
               if (skillsToUse === hardSkills) {
                 return (
                   <img
-                    key={skill.name}
-                    src={skill.icon}
-                    alt={skill.name}
-                    onMouseLeave={() => setHoveringMessage('')}
-                    onMouseEnter={() => setHoveringMessage(skill.description)}
+                    className="description__container__hardskill__icon"
+                    key={name}
+                    src={icon}
+                    alt={name}
+                    onMouseLeave={() =>
+                      setHoveringMessage('Hover a skill to see its description')
+                    }
+                    onMouseEnter={() => setHoveringMessage(description)}
                   />
                 );
               }
+
               return (
                 <h1
-                  key={skill.name}
-                  onMouseLeave={() => setHoveringMessage('')}
-                  onMouseEnter={() => setHoveringMessage(skill.description)}
+                  className="description__container__softskill__description"
+                  key={name}
+                  onMouseLeave={() =>
+                    setHoveringMessage('Hover a skill to see its description')
+                  }
+                  onMouseEnter={() => setHoveringMessage(description)}
                 >
-                  {skill.name}
+                  {name}
                 </h1>
               );
             })}
           </section>
         </section>
-
-        <p>{hoveringMessage}</p>
       </section>
     </section>
   );
