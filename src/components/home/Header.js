@@ -20,7 +20,7 @@ export default function Header() {
         darkMode ? 'header__container__dark' : 'header__container__light'
       }
     >
-      <Link to="/about-me">
+      <Link to="/">
         <p
           className={
             darkMode
