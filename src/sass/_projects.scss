@@ -1,0 +1,78 @@
+%project__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.project__container__light {
+  @extend %project__container;
+  background-color: $primary-color-light;
+  color: $secondary-color-light;
+}
+
+.project__container__dark {
+  @extend %project__container;
+  background-color: $primary-color-dark;
+  color: $secondary-color-dark;
+}
+
+.project__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin: 3.5em;
+  &:hover {
+    transform: scale(1.05);
+
+    button {
+      background-color: $special-color-dark;
+      color: white;
+    }
+  }
+}
+
+.project__image {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.project__name {
+  font-size: 1.5em;
+  margin-top: 0.3em;
+}
+
+.project__description {
+  font-size: 1.1em;
+  margin: 0.3em;
+}
+
+.project__link__button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: $secondary-color-light;
+  color: white;
+  font-size: 1.1em;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: $special-color-dark;
+  }
+}

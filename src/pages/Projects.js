@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../components/generic/Header';
-import Main from '../components/Projects/Main';
+import MainProjects from '../components/Projects/MainProjects';
 
 export default function Projects() {
   return (
     <main>
       <Header />
-      <Main />
+      <MainProjects />
     </main>
   );
 }
