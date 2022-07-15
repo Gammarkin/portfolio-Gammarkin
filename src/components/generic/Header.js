@@ -3,8 +3,8 @@ import {Link, useLocation} from 'react-router-dom';
 import AppContext from '../../context/AppContext';
 import HamburguerMenu from './HamburguerMenu';
 
-import dark from '../../icons/iconmonstr-flashlight-13.png';
 import light from '../../icons/iconmonstr-flashlight-14.png';
+import dark from '../../icons/iconmonstr-weather-115-240.png';
 
 const darkModeColor = 'orange';
 const lightModeColor = 'hsl(30, 80%, 70%)';
