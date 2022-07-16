@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-Gammarkin/static/css/main.9ca2a74c.css",
-    "main.js": "/portfolio-Gammarkin/static/js/main.ca325723.js",
+    "main.css": "/portfolio-Gammarkin/static/css/main.c414347b.css",
+    "main.js": "/portfolio-Gammarkin/static/js/main.21522973.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio-Gammarkin/static/js/787.1ed0c42c.chunk.js",
     "static/media/app-receitas.png": "/portfolio-Gammarkin/static/media/app-receitas.94d0ece6ba7e16dfcf69.png",
     "static/media/shopping-cart.png": "/portfolio-Gammarkin/static/media/shopping-cart.30a066d17eb2678a1396.png",
@@ -13,12 +13,12 @@
     "static/media/iconmonstr-brightness-9-240.png": "/portfolio-Gammarkin/static/media/iconmonstr-brightness-9-240.c835c62191e54b2d4d1c.png",
     "static/media/iconmonstr-weather-115-240.png": "/portfolio-Gammarkin/static/media/iconmonstr-weather-115-240.151644fb9e6268d839ba.png",
     "index.html": "/portfolio-Gammarkin/index.html",
-    "main.9ca2a74c.css.map": "/portfolio-Gammarkin/static/css/main.9ca2a74c.css.map",
-    "main.ca325723.js.map": "/portfolio-Gammarkin/static/js/main.ca325723.js.map",
+    "main.c414347b.css.map": "/portfolio-Gammarkin/static/css/main.c414347b.css.map",
+    "main.21522973.js.map": "/portfolio-Gammarkin/static/js/main.21522973.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio-Gammarkin/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ca2a74c.css",
-    "static/js/main.ca325723.js"
+    "static/css/main.c414347b.css",
+    "static/js/main.21522973.js"
   ]
 }
