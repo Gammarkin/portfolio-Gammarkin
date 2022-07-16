@@ -15,7 +15,6 @@ export default function Description() {
     <section
       className={`description__container__${darkMode ? 'dark' : 'light'}`}
     >
-      <h2 style={{color: 'white'}}>Skills</h2>
       <section
         className={`description__container__text__${
           darkMode ? 'dark' : 'light'
@@ -26,7 +25,7 @@ export default function Description() {
             My current skills as a developer.
             <br /> And there's more to come.
           </p>
-          <section className="flex">
+          <section className="description__button__container">
             <button
               className={`description__container__hardskill__button__${
                 darkMode ? 'dark' : 'light'

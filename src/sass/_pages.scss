@@ -1,3 +1,10 @@
 @import 'notfound';
 @import 'about';
 @import 'projects';
+
+.home__content {
+  display: 'flex';
+  flex: 1;
+  flex-direction: 'column';
+  background-color: lighten($secondary-color-light, 3%);
+}

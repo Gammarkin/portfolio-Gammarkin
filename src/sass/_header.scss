@@ -78,6 +78,7 @@
 .header__utilities__button__light {
   @extend %header__utilities__btn;
   color: black;
+  background-color: $primary-color-dark;
   font-family: $font-family-base;
 }
 
@@ -85,6 +86,7 @@
   @extend %header__utilities__btn;
   color: black;
   font-family: $font-family-base;
+  background-color: $special-color-dark;
 }
 
 %header__utilities__links {

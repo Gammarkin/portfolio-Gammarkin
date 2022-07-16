@@ -7,8 +7,10 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <Introduction />
-      <Description />
+      <section className="home__content">
+        <Introduction />
+        <Description />
+      </section>
     </main>
   );
 }
