@@ -13,10 +13,7 @@ export default function HamburguerMenu() {
   };
 
   return (
-    <Menu
-      style={darkMode ? {backgroundColor: '#fafafa', borderRadius: '.3em'} : {}}
-      className="header__hamburguer__menu"
-    >
+    <Menu style={{color: 'black'}} className="header__hamburguer__menu">
       <Menu.Label>Utilities</Menu.Label>
       <Menu.Item onClick={handleSetDarkMode}>
         <p
