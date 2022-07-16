@@ -103,12 +103,16 @@
   justify-content: space-around;
   width: 60vw;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .description__container__softskill__description {
   text-align: center;
   font-size: 1.5em;
+  background-color: $special-color-dark;
   color: orange;
-  width: 20vw;
+  width: 15vw;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 2em;
 }
