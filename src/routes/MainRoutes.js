@@ -11,7 +11,7 @@ import Contacts from '../pages/Contacts';
 export default function MainRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/portfolio-Gammarkin/" element={<Home />} />
       <Route path="/about-me" element={<AboutMe />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/contacts" element={<Contacts />} />

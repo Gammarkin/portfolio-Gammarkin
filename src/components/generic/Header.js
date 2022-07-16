@@ -17,7 +17,7 @@ export default function Header() {
 
   useEffect(() => {
     switch (pathname) {
-      case '/':
+      case '/portfolio-Gammarkin/':
         setLastClicked('');
         break;
       case '/about-me':
@@ -46,7 +46,7 @@ export default function Header() {
         darkMode ? 'header__container__dark' : 'header__container__light'
       }
     >
-      <Link to="/">
+      <Link to="/portfolio-Gammarkin/">
         <p
           style={
             lastClicked === ''

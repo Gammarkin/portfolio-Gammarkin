@@ -12,7 +12,7 @@ export default function NotFound() {
         Page not found
       </p>
 
-      <Link to="/">
+      <Link to="/portfolio-Gammarkin/">
         <p className={`error404__link__${darkMode ? 'dark' : 'light'}`}>
           Take me back to home
         </p>
