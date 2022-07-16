@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   margin-top: 5vh;
 }
 
@@ -32,8 +32,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25vw;
-  height: 25vh;
+  width: 20vw;
+  height: 20vh;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
@@ -89,6 +89,14 @@
 }
 
 @media screen and (max-width: 768px) {
+  .project__container__light {
+    height: 100%;
+  }
+
+  .project__container__dark {
+    height: 100%;
+  }
+
   .project__item {
     width: 100%;
     height: 100%;
