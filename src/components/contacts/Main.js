@@ -4,7 +4,7 @@ import AppContext from '../../context/AppContext';
 export default function Main() {
   const {darkMode} = useContext(AppContext);
   return (
-    <section className={`about__container__${darkMode ? 'dark' : 'light'}`}>
+    <section className={`contacts__container__${darkMode ? 'dark' : 'light'}`}>
       <p className={`about__email__${darkMode ? 'dark' : 'light'}`}>
         email: marcosrbnsf@gmail.com
       </p>
